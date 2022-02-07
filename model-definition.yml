@@ -1,0 +1,39 @@
+kind: Model
+api_version: v1beta1
+metadata:
+  display_name: HBV-UK
+  name: HBV-UK
+  summary: HBV-UK is a conceptual spatially-distributed hydrological model.
+  source_code: https://github.com/OpenCLIM/hbv-dafni
+  publisher: Tyndall Centre, University of East Anglia
+  description: >
+    HBV-UK is a model for water flow in river catchments.
+    HBV-UK is a daily, conceptual and spatially-distributed hydrological model set up at a 1x1km spatial resolution.
+spec:
+  inputs:
+    dataslots:
+      - name: HBV-UK input files
+        description: HBV-UK input files
+        path: inputs/zip
+        required: false
+
+    parameters:
+      - name: TITLE
+        title: Title
+        type: string
+        description: The title given to the output dataset in the generated metadata file.
+        default: HBV-UK output
+        required: false
+
+  outputs:
+    datasets:
+      - name: outputs
+        type: folder
+        description:
+          HBV output files.
+
+      - name: outputs/metadata.json
+        type: JSON
+        description:
+          NID metadata for outputs.
+          This file can be used for creating datasets on DAFNI using the title specified as an input parameter.
