@@ -2,7 +2,7 @@ kind: Model
 api_version: v1beta1
 metadata:
   display_name: HBV-UK
-  name: HBV-UK
+  name: hbv-uk
   summary: HBV-UK is a conceptual spatially-distributed hydrological model.
   source_code: https://github.com/OpenCLIM/hbv-dafni
   publisher: Tyndall Centre, University of East Anglia
